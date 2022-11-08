@@ -6,7 +6,17 @@
 	z-index: 1;
 	display: block;
 	position: absolute;
-	transform: translate(-50%,-50%)
+	transform: translate(-50%,-50%);
+	animation: heart 1s ease infinite
+}
+
+@keyframes heart {
+	96% {
+		transform: translate(-50%,-50%) scale(.8,.8)
+	}
+	100% {
+		transform: translate(-50%,-50%) scale(1,1)
+	}
 }
 
 .heart div {
@@ -17,7 +27,7 @@
 	display: block;
 	position: absolute;
 	border-radius: 50%
-}
+	}
 
 .left {
 	left: 45px;
@@ -28,3 +38,4 @@
 	right: 45px;
 	transform: rotate(30deg);
 }
+
