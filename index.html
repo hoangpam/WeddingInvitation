@@ -206,34 +206,40 @@
                 <div class="row">
                     <div class="col-md-8 col-md-push-2">
                         <!-- action http://bichtrung.net/customers -->
-                        <form class="new_customer" id="new_customer" action="#" accept-charset="UTF-8"
-                            data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+                         <form class="new_customer" id="new_people" role="form" onsubmit="submitted=true;"
+                            target="hidden_iframe" data-remote="true" method="GET"
+                            action="https://script.google.com/macros/s/AKfycbzDej77mcuAWY0VFQLsYDw5B8G-Qi_riSeq9jiVYN4cf8AuqkPPH7PacexSLCQw4KrL/exec"
+                            accept-charset="UTF-8">
+                            <input name="utf8" type="hidden" value="&#x2713;" />
                             <div class="row">
                                 <div class="col-md-6"><label>Tên của bạn</label><input class="form-control form-opacity"
-                                        type="text" name="customer[name]" id="customer_name" /></div>
+                                        type="text" name="ten" id="ten" value="" /></div>
                                 <div class="col-md-6"><label>Email hoặc số điện thoại</label><input
-                                        class="form-control form-opacity" type="text" name="customer[contact]"
-                                        id="customer_contact" /></div>
+                                        class="form-control form-opacity" type="text" name="emailhoacsdt"
+                                        id="emailhoacsdt" value="" /></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12"><label>Bạn tham gia được những buổi nào?</label></div>
                             </div>
                             <div class="row" style="margin-bottom: 20px;">
-                                <div class="col-md-6"><input name="attend" type="checkbox" value="1" />&ensp;<span>Cỗ
+                                <div class="col-md-6"><input name="attend" type="checkbox" value="1"
+                                        id="buoithamdu1" />&ensp;<span>Cỗ
                                         cưới nhà
                                         gái - Chủ nhật 13/11/2022</span></div>
-                                <div class="col-md-6"><input name="attend" type="checkbox" value="2" />&ensp;<span>Lễ
+                                <div class="col-md-6"><input name="attend" type="checkbox" value="2"
+                                        id="buoithamdu2" />&ensp;<span>Lễ
                                         cưới -
                                         Thứ 2 14/11/2022</span></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12"><label>Bạn có muốn nhắn nhủ điều gì không?</label><textarea
-                                        class="form-control form-opacity" name="customer[note]" id="customer_note">
+                                        class="form-control form-opacity" name="loinhannhu" id="loinhannhu" value=""
+                                        type="text">
 </textarea></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12"><input type="submit" name="commit" value="Tôi sẽ đến"
-                                        class="btn submit" data-disable-with="Tôi sẽ đến" /></div>
+                                        class="btn submit" data-disable-with="Tôi sẽ đến" id="thongbao" /></div>
                             </div>
                         </form>
                     </div>
@@ -338,6 +344,12 @@
         }
     </script>
     <script type="text/javascript" src="https://sites.google.com/site/bituotblog/disable-copy.js"></script>
+	<script>
+        var button = document.getElementById("thongbao");
+        button.onclick = function () {
+            alert("Cảm ơn bạn đã đến!");
+        }
+    </script>
     <style>
         body {
             -moz-user-select: none !important;
