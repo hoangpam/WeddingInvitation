@@ -21,11 +21,13 @@
 
 <body class="gla_middle_titles">
     <div class="gla_page" id="gla_page">
-        <!--To Top--><a class="gla_top ti ti-angle-up gla_go" href="#gla_page"></a>
+        <!--To Top--><a class="gla_top ti ti-angle-up gla_go" href="#gla_page" ></a>
         <!--Music-->
-        <div class="gla_music_icon"><i class="ti ti-music"></i></div>
-        <div class="gla_music_icon_cont"><iframe
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/466256223&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        <div class="gla_music_icon" ><i class="ti ti-music" id="icon" ></i></div>
+        <div class="gla_music_icon_cont">
+            <audio id="mySong">
+                <source src="assets/audio/ChoNgayCuoiEmRemix-HuongLyPhatHo-7586772.mp3"></source>
+            </audio>
         </div>
         <header>
             <nav class="gla_light_nav gla_transp_nav">
@@ -313,6 +315,19 @@
     </div>
     <script src="assets/application-fd71724cc333575ec92c93d45bb20b69d18eb0797c466bafc3b76bba98c4cccb.js"
         data-turbolinks-track="reload"></script>
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+            }
+            else{
+                mySong.pause();
+            }
+        }
+    </script>
 </body>
 
 </html>
